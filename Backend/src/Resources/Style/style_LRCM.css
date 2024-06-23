@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Style du header */
+* {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Animation pour les boutons "Accueil" et "Ajouter" */
+.btn-accueil,
+.btn-ajouter,
+.btn-supprimer {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-accueil::before,
+.btn-ajouter::before,
+.btn-supprimer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: skewX(45deg);
+    transition: all 0.3s ease;
+}
+
+.btn-accueil:hover::before,
+.btn-ajouter:hover::before,
+.btn-supprimer:hover::before {
+    left: 100%;
+}
+
+/* Style des formulaires */
+
+
+/* Encadrement des boutons "Accueil", "Ajouter" et "Supprimer" */
+header .btn-accueil,
+header .btn-ajouter,
+header .btn-supprimer {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    background-color: transparent;
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+header .btn-accueil::before,
+header .btn-ajouter::before,
+header .btn-supprimer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: skewX(45deg);
+    transition: all 0.3s ease;
+}
+
+header .btn-accueil:hover::before,
+header .btn-ajouter:hover::before,
+header .btn-supprimer:hover::before {
+    left: 100%;
+}
+
+/* Style du tableau */
+main {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(76, 175, 80, 0.4);
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+}
+
+.img-voiture {
+    width: 150px;
+    height: auto;
+}
+
+/* Style du bouton supprimer */
+.delete-button {
+    background-color: #f2f2f2;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: rgb(117, 117, 117);
+}
+
+/* ====================== */
+
+/* Style du formulaire */
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="varchar"],
+input[type="int"] {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button.edit-button {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button.edit-button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+a.cancel-button {
+    font-family: 'Bebas Neue', sans-serif;
+    display: block;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+  
+a.cancel-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Style du footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
